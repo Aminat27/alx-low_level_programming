@@ -2,7 +2,6 @@
 
 /**
 * main - causes an infinite loop
-* Infinite loop is caused by not incrementing the while loop
 * Return: 0
 */
 
