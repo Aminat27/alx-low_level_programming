@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * _puts - a function that prints a string, followed by a new line, to stdout.
+ * @str: the character to print
+ *
+*/
 void _puts(char *str)
 {
 	int read = 0, i;
@@ -7,7 +12,7 @@ void _puts(char *str)
 	{
 		read++;
 	}
-	for (i = 0; i <= read; i++ )
+	for (i = 0; i <= read; i++)
 	{
 
 		_putchar(str[i]);
