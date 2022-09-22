@@ -1,14 +1,26 @@
 #include "main.h"
+
+/**
+ * leet - a function that encodes a string into 1337.
+ * @s: an input string to encode
+ * Return: An encode string
+ */
 char *leet(char *s)
 {
-	char i, j;
+	int i = 0, j;
+	char sub[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	char str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 
-	for (i = 'a'; i <= 'z'; i++)
+	while (s[i])
 	{
-		for (j = 'A'; j <= 'Z'; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if(i == 'a' && j == 'A')
-				_putchar('4');
+			if (s[i] == str[j])
+			{
+				s[i] = sub[j];
+			}
 		}
+	i++;
 	}
+	return (s);
 }
