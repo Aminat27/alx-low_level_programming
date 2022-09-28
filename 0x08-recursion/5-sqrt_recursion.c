@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * power_operation - returns the natural square root of a number.
- * @n: input number.
- * @c: iterator.
+ * squrt_operation - returns the natural square root of a number.
+ * @a: input number.
+ * @b: iterator.
  * Return: square root or -1.
  */
 int squrt_operation(int a, int b)
