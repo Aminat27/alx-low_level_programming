@@ -1,0 +1,359 @@
+!<arch>
+0-isupper.c/    0           0     0     644     278       `
+#include "main.h"
+/**
+ * _isupper - check the code
+ * @c: An input number
+ * Description: function uses _putchar function to print
+ * Return: 1 if c is uppercase or 0 otherwise
+ */
+int _isupper(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+0-memset.c/     0           0     0     644     354       `
+#include "main.h"
+#include <string.h>
+/**
+ * _memset- a function that fills the first n bytes of the memory area
+ * pointed to by s with the constant byte b
+ * @s: pointer to string
+ * @b: input character b
+ * @n: input integer n
+ * Return: a pointer to the memory area s
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	return (memset(s, b, n));
+}
+0-strcat.c/     0           0     0     644     305       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strcat - a function that appends the src string  to by dest,
+ * @dest: A pointer to destination of string
+ * @src: A pointer to source string to copy from
+ *
+ * Return: pointer to dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	return (strcat(dest, src));
+}
+
+1-isdigit.c/    0           0     0     644     278       `
+#include "main.h"
+/**
+ * _isdigit - check the code
+ * @c: An input number
+ * Description: function uses _putchar function to print
+ * Return: 1 if c is digit or 0 if otherwise
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+1-memcpy.c/     0           0     0     644     367       `
+#include "main.h"
+#include <string.h>
+/**
+ * _memcpy - a function that copies n bytse from memory area scr
+ * to memory area dest
+ * @dest: A pointer to destination of string
+ * @src: A pointer to source string to copy from
+ * @n: number of bytes
+ * Return: pointer to dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	return (memcpy(dest, src, n));
+}
+
+1-strncat.c/    0           0     0     644     335       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strncat - a function that appends the src string to dest ,
+ * @dest: A pointer to destination of string
+ * @src: A pointer to source string to copy from
+ * @n: number of bytes
+ * Return: pointer to dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	return (strncat(dest, src, n));
+}
+
+100-atoi.c/     0           0     0     644     573       `
+#include "main.h"
+
+/**
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
+ */
+int _atoi(char *s)
+{
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+
+	while (*(s + count) != '\0')
+	{
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
+
+		if (*(s + count) == '-')
+			pn *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
+		}
+		count++;
+	}
+
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (oi * pn);
+}
+
+2-strchr.c/     0           0     0     644     330       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strchr - a function that locates a character in a string
+ * @s: input string
+ * @c: input character
+ * Return: a pointer to the first occurrence of the character c in the string s
+ * or NULL if the character is not found
+ */
+char *_strchr(char *s, char c)
+{
+	return (strchr(s, c));
+}
+2-strlen.c/     0           0     0     644     225       `
+#include "main.h"
+/**
+ * _strlen -  a function that returns the length of a string.
+ * @s: input string
+ * Return: read.
+ */
+int _strlen(char *s)
+{
+	int read = 0;
+
+	while (*s != '\0')
+	{
+		read++;
+		s++;
+	}
+	return (read);
+}
+
+2-strncpy.c/    0           0     0     644     346       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strncpy - a function that copies the string pointed to by src to dest
+ * @dest: A pointer to destination of string
+ * @src: A pointer to source string to copy from
+ * @n: number of bytes
+ * Return: pointer to dest
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	return (strncpy(dest, src, n));
+}
+3-islower.c/    0           0     0     644     330       `
+#include "main.h"
+/**
+ * _islower - check the code
+ * @c: An input number
+ * Description: function uses _putchar function to print
+ * alphabet in lowercase 10 times
+ * Return: 1 if c is lowercase or 0 if it's uppercase
+ */
+int _islower(int c)
+{
+		if (c >= 'a' && c <= 'z')
+		{
+			return (1);
+		}
+
+		else
+		{
+			return (0);
+		}
+
+}
+3-puts.c/       0           0     0     644     197       `
+#include "main.h"
+#include <stdio.h>
+/**
+ * _puts - a function that prints a string, followed by a new line, to stdout.
+ * @str: the character to print
+ *
+ */
+void _puts(char *str)
+{
+	puts(str);
+}
+
+3-strcmp.c/     0           0     0     644     285       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strcmp - a function that compares two strings,
+ * @s1: first string input
+ * @s2: second string input
+ *
+ * Return: 0 if s1 and s2 are equal, -ve if s1 < s2, +ve if s1 > s2
+ */
+int _strcmp(char *s1, char *s2)
+{
+	return (strcmp(s1, s2));
+}
+
+3-strspn.c/     0           0     0     644     340       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strspn - a function that gets the length of a prefix substring.
+ * @s: input string
+ * @accept: input character
+ * Return:the number of bytes in the initial segment of s
+ * which consist only of bytes from accept
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	return (strspn(s, accept));
+}
+4-isalpha.c/    0           0     0     644     316       `
+#include "main.h"
+/**
+ * _isalpha- check the code
+ * @c: An input number
+ * Description: function uses _putchar function to print
+ *
+ * Return: 1 if c is lowercase or 0 if it's uppercase
+ */
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+4-strpbrk.c/    0           0     0     644     383       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strpbrk - a function that searches a string s for any of a set of bytes
+ * in the string accept
+ * @s: input string
+ * @accept: input character
+ * Return: a pointer to the byte in s that matches one of the byte in accept
+ * or NULL if no such byte is not found
+ */
+char *_strpbrk(char *s, char *accept)
+{
+	return (strpbrk(s, accept));
+}
+
+5-strstr.c/     0           0     0     644     393       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strstr - a function that finds the first occerence of thr substring needle
+ * in the string haystack
+ * @haystack: input string
+ * @needle: input substring
+ * Return: a pointer to the beginning of the located substring
+ * or NULL if the substing is not found
+ */
+char *_strstr(char *haystack, char *needle)
+{
+	return (strstr(haystack, needle));
+}
+
+6-abs.c/        0           0     0     644     285       `
+#include "main.h"
+/**
+ * _abs - check the code
+ * @r: An input number
+ * Description: function uses _putchar function to print
+ * alphabet in lowercase 10 times
+ * Return: r if r > = 0 else r * -1
+ */
+int _abs(int r)
+{
+	if (r >= 0)
+	{
+		return (r);
+	}
+	else
+	{
+		return (r * -1);
+	}
+}
+
+9-strcpy.c/     0           0     0     644     306       `
+#include "main.h"
+#include <string.h>
+/**
+ * _strcpy - a function that copies the string pointed to by src,
+ * @dest: A pointer to destination of string
+ * @src: A pointer to source string to copy from
+ *
+ * Return: pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	return (strcpy(dest, src));
+}
+_putchar.c/     0           0     0     644     247       `
+#include <unistd.h>
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+main.c/         0           0     0     644     148       `
+#include "main.h"
+
+int main(void)
+{
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
+}
