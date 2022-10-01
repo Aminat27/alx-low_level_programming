@@ -4,10 +4,10 @@
 /**
  * main- program that prints its name, followed by a new line.
  * @argc: input argument
- *
- * return: 0
+ * @argv: input string of arg
+ * Return: 0
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
