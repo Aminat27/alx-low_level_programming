@@ -2,10 +2,10 @@
 #include <ctype.h>
 #include <stdlib.h>
 /**
- * main- program that prints its name, followed by a new line.
- * @argc: input argument
- * @argv: input string of arg
- * Return: 0
+ * main - adds positive numbers.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
 int main(int argc, char *argv[])
 {
