@@ -4,11 +4,16 @@
 /**
  * main- program that prints its name, followed by a new line.
  * @argc: input argument
- *
+ * @argv: input string of arg
  * Return: 0
  */
-int main(int argc, char *argv[] __attribute__ ((unused)))
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
 	return (0);
 }
