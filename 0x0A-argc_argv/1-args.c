@@ -4,7 +4,7 @@
 /**
  * main- program that prints its name, followed by a new line.
  * @argc: input argument
- *
+ * @argv: input string arg
  * Return: 0
  */
 int main(int argc, char *argv[] __attribute__ ((unused)))
