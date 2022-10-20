@@ -2,7 +2,7 @@
 /**
  * print_list - check the code
  * @h: pointer to the list
- * Return: Always 0.
+ * Return: number of element in the list.
  */
 size_t print_list(const list_t *h)
 {
