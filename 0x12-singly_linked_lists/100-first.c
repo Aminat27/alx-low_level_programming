@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * pre_main - check the code
+ * premain - check the code
  *
  * Return: Always 0.
  */
