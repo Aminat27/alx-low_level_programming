@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
- * size_t print_list - check the code
- * @h - pointer to the list
+ * print_list - check the code
+ * @h: pointer to the list
  * Return: Always 0.
  */
 size_t print_list(const list_t *h)
