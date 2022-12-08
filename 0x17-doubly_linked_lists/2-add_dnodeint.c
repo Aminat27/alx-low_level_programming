@@ -3,7 +3,7 @@
  * add_dnodeint - adds a new node at the beginning
  * of a list_t list.
  * @head: head of the linked list.
- * @str: string to store in the list.
+ * @n: string to store in the list.
  * Return: address of the head.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
@@ -30,6 +30,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (i != NULL)
 		i->prev = new;
-
+	*head = new;
 	return (new);
 }
